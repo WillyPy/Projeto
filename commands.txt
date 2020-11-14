@@ -1,0 +1,6 @@
+VSCode will open a terminal in the project folder.Run the following line in the terminal:
+    mvnw spring-boot:run
+
+If it gives you this error “Error: JAVA_HOME not found in your environment.”
+then you must set the path to your JDK installation:
+    set JAVA_HOME=c:\Program Files\Java\jdk1.8.0_202
