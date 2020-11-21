@@ -11,7 +11,7 @@ Número | Nome
 Apoiar zonas de Angola menos desenvolvidas, inclusive por meio de assistência técnica e financeira, para construções sustentáveis e resilientes, utilizando materiais locais, dando oportunidades de negócios locais e fornecendo empregos.
 De momento não se foi encontradas aplicações com o mesmo objectivo que a CitySOS mas algumas semelhantes em que se pode realçar que a CitySOS tem uma vantagem pois através dela não so podemos pedir ajuda mas como podemos ajudar directamente fornecendo uma base para melhor desenvolvimento e crescimento do país utilizando assim a sua propria materia prima.
 
-É uma aplicação que permite que os países mais desenvolvidos possam ter acesso as áreas de um determinado país em que necessita de mais ajuda.
+É uma aplicação que permite as empresas que tenham um projeto de uma edificação sustentável, publicarem a sua ideia e a mesma é revisada e aprovada pela empresa que dá o apoio.
 
 Este projeto enquadra-se no **Objetivo 11: Cidades e comunidades sustentáveis** das Nações Unidas.
 
@@ -21,60 +21,46 @@ Foi neste contexto que tiramos a ideia de fazer este projeto.
 ## **Casos de utilização:**
 
 * Pedido de SOS
-* A Zona a ser ajudada.
-* O utilizador fornece a sua ajuda.
+* Publicações.
+* A empresa fornece a ajuda.
 
 ### **Pedido de SOS**
 
 **Descrição:** 
 
-O utilizador faz o pedido para que seja feita a construção de uma escola na sua zona pois as escolas existentes encontram-se muito distantes do local e com pouca capacidade de alunos.
+A empresa publica o projeto de construção de uma escola em uma zona pois as escolas existentes encontram-se muito distantes do local e com pouca capacidade de alunos.
 
 **Pré-condições:**
 
 * Fazer um registo;  
-* Ter uma coneção a internet;
+* Ter uma conexão a internet;
 * Informações detalhadas;
 
 **Passo a passo:**
-1. O utilizador após fazer o seu pedido tendo fornecido as informações(o tipo de pedido, o porque do seu pedido, nome da instituição-caso pertença a uma, o espaço necessario) é feita uma revisão e estudo do problema apresentado tais como a verificação da sua veracidade e o que trará de novo ao mesmo, desde a empregos, materias a ser utilizados de forma a ser o menos poluente e caro.
-2. De seguida recebe a sua resposta e é feito contacto.
+1. Depois de fazer o registo com os seus dados (email, nome, password), o utilizador entra na página inicial onde vê as seguintes opções: fazer um post, publicações;
+2. Entra em **fazer um post**;
+3. Escreve o seu projeto;
+4. Clicar no botão publicar para poder publicar o seu projeto;
+5. Recebe uma informação a dizer que a sua publicação foi feita.
 
 **Pós-condições:**
 
 * Estar logado
 
-### **A Zona a ser ajudada**
+### **Publicações**
 
-**Descrição:**  
+**Descrição**
 
- A zona a ser ajudada apresenta informações detalhadamete sobre o tipo de ajuda e quanto é necessario para a mesma, no caso de uma construção de escola irá se deparar com(quantidades de crianças sem acesso a uma escola, nivel de analfabetismo, materiais essencias para a construção e manuntenção da mesma, duração da contrução, entre outros) para melhor analise terá acesso tambem ao quadro pós ajuda onde é apresentado o que acontecerá depois de tal apoio tais como(o numero de crianças a estudar, o numero de empregos, entre outros.
-
-**Pré-condições:**
-
-* Estar logado;
-
-**Passo a passo:**
-
-1. O ajudante tem acesso as areas e o tipo de ajuda que necessita podendo assim solicitar mais informações vendo se é viavel ou não tal ajuda.
-2. Recebendo por via de email ou mesmo por uma mensagem direta um documento assim fornecido pela instituição ou grupo que solicitou tal ajuda.
-
-**Pós-condições:**
-
-* Aguardar confirmação da sua conta
-
-### **O utilizador fornece a sua ajuda**
-
-**Descrição:**  
-
+Publicações é a área onde a empresa que aprova os projetos utiliza para ver as propostas publicadas na CitySOS.
 
 **Pré-condições:**
 
-* Estar logado;
+* Estar logado.
 
 **Passo a passo:**
 
-1. 
+1. Clicar em **publicações** na página inicial;
+2. A página é carregada e as publicações são apresentadas em forma de lista.
 
 **Pós-condições:**
 
