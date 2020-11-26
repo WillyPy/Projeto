@@ -8,10 +8,11 @@ Número | Nome
 
 ## **Enquadramento**
 
-Apoiar zonas de Angola menos desenvolvidas, inclusive por meio de assistência técnica e financeira, para construções sustentáveis e resilientes, utilizando materiais locais, dando oportunidades de negócios locais e fornecendo empregos.
-De momento não se foi encontradas aplicações com o mesmo objectivo que a CitySOS mas algumas semelhantes em que se pode realçar que a CitySOS tem uma vantagem pois através dela não so podemos pedir ajuda mas como podemos ajudar directamente fornecendo uma base para melhor desenvolvimento e crescimento do país utilizando assim a sua propria materia prima.
+Em Angola existem zonas residenciais que não possuem o número de escolas suficientes para albergar todos cidadões. E em outros casos que a zona não possui escola nenhuma, e tem que haver deslocação para poder ter acesso a educação.
 
-É uma aplicação que permite as empresas que tenham um projeto de uma edificação sustentável, publicarem a sua ideia e a mesma é revisada e aprovada pela empresa que dá o apoio.
+O objetivo do projeto é apoiar zonas residenciais de Angola, por meio de assistência técnica e financeira. Pretendemos apoiar com construções de escolas sustentáveis e resilientes, utilizando materiais locais, dando oportunidades a negócios locais e fornecendo empregos. A aplicação que permite uma empresa que tenha um projeto de uma edificação sustentável, publique a sua ideia, sendo a mesma é revisada e aprovada pela empresa que dá o apoio.
+
+ **De momento não se foi encontradas aplicações com o mesmo objectivo que a CitySOS mas algumas semelhantes. Realçamos que a CitySOS tem uma vantagem, pois através dela não só podemos pedir ajuda, mas como podemos ajudar directamente fornecendo uma base para o desenvolvimento e crescimento do país, utilizando a sua propria matéria prima.**
 
 Este projeto enquadra-se no **Objetivo 11: Cidades e comunidades sustentáveis** das Nações Unidas.
 
@@ -45,7 +46,7 @@ A empresa publica o projeto de construção de uma escola em uma zona pois as es
 
 **Pós-condições:**
 
-* Estar logado
+* O utilizador deve estar autenticado.
 
 ### **Publicações**
 
@@ -55,7 +56,7 @@ Publicações é a área onde a empresa que aprova os projetos utiliza para ver 
 
 **Pré-condições:**
 
-* Estar logado.
+* O utilizador deve estar autenticado.
 
 **Passo a passo:**
 
