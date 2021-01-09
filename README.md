@@ -8,9 +8,9 @@ Número | Nome
 
 ## **Enquadramento**
 
-Em Angola existem zonas residenciais que não possuem o número de escolas suficientes para albergar todos cidadões. E em outros casos que a zona não possui escola nenhuma, e tem que haver deslocação para poder ter acesso a educação.
+Em Angola existem zonas que não possuem o número de escolas suficientes para proporcionar ensino as crianças. Em certas áreas, sobretudo rurais, as escolas simplesmente não existem, ou são demasiado longínquas, obrigando as crianças a caminhar longas distâncias.
 
-O objetivo do projeto é apoiar zonas residenciais de Angola, por meio de assistência técnica e financeira. Pretendemos apoiar com construções de escolas sustentáveis e resilientes, utilizando materiais locais, dando oportunidades a negócios locais e fornecendo empregos. A aplicação que permite uma empresa que tenha um projeto de uma edificação sustentável, publique a sua ideia, sendo a mesma é revisada e aprovada pela empresa que dá o apoio.
+O objetivo do projeto é apoiar zonas de Angola, por meio de assistência técnica e financeira. Pretendemos apoiar a construção de escolas sustentáveis e resilientes, que usem materiais locais ou fornecidos localmente, e que forneçam empregos. A aplicação permite que uma empresa que tenha um projeto de uma edificação sustentável publique a sua ideia, sendo a mesma é revisada e aprovada pela empresa que presta o apoio.
 
  **De momento não se foi encontradas aplicações com o mesmo objectivo que a CitySOS mas algumas semelhantes. Realçamos que a CitySOS tem uma vantagem, pois através dela não só podemos pedir ajuda, mas como podemos ajudar directamente fornecendo uma base para o desenvolvimento e crescimento do país, utilizando a sua propria matéria prima.**
 
