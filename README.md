@@ -7,14 +7,14 @@ Número | Nome
 50035088 |	William Valter Ambrósio Feijó
 
 ## **Enquadramento**
+Em certas áreas de Angola, sobretudo rurais, as escolas simplesmente não existem, ou são demasiado longínquas, obrigando as crianças a caminhar longas distâncias.
 
-Em Angola existem zonas que não possuem o número de escolas suficientes para proporcionar ensino as crianças. Em certas áreas, sobretudo rurais, as escolas simplesmente não existem, ou são demasiado longínquas, obrigando as crianças a caminhar longas distâncias.
+Este projeto enquadra-se no **Objetivo 11: Cidades e comunidades sustentáveis** das Nações Unidas.
 
 O objetivo do projeto é apoiar zonas de Angola, por meio de assistência técnica e financeira. Pretendemos apoiar a construção de escolas sustentáveis e resilientes, que usem materiais locais ou fornecidos localmente, e que forneçam empregos. A aplicação permite que uma empresa que tenha um projeto de uma edificação sustentável publique a sua ideia, sendo a mesma é revisada e aprovada pela empresa que presta o apoio.
 
  **De momento não se foi encontradas aplicações com o mesmo objectivo que a CitySOS mas algumas semelhantes. Realçamos que a CitySOS tem uma vantagem, pois através dela não só podemos pedir ajuda, mas como podemos ajudar directamente fornecendo uma base para o desenvolvimento e crescimento do país, utilizando a sua propria matéria prima.**
 
-Este projeto enquadra-se no **Objetivo 11: Cidades e comunidades sustentáveis** das Nações Unidas.
 
 * [1] Objetivo 11: Cidades e comunidades sustentáveis  
 Foi neste contexto que tiramos a ideia de fazer este projeto.
