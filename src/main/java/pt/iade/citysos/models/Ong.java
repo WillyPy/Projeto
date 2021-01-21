@@ -9,8 +9,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "ong")
 public class Ong {
 
     @Id
@@ -19,24 +22,19 @@ public class Ong {
     private int id;
     @Column(name="ong_nome")
     private String nome;
-    @Column(name="pedidos_aprovados")
-    private int pedidos_aprovados;
+    
+    @OneToOne
+    @JoinColumn(name="ong_e_id")
+    private Empresa empresas;
     
     @OneToMany
     @JoinColumn(name="pedido_ong_id")
-    private List<PedidoSos> pedidos;
+    private List<Pedido> pedidos;
 
-    public Ong(int id, String nome, int pedidos_aprovados){
+    public Ong(int id, String nome){
         id = this.id;
         nome = this.nome;
-        pedidos_aprovados = this.pedidos_aprovados;
     }
 
-    public String getNome(){
-        return nome;
-    }
-
-    public int getPedidosAprovados(){
-        return pedidos_aprovados;
-    }
+    public String getNome(){ return nome; }
 }

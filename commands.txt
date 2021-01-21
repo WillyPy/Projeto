@@ -4,3 +4,8 @@ VSCode will open a terminal in the project folder.Run the following line in the 
 If it gives you this error “Error: JAVA_HOME not found in your environment.”
 then you must set the path to your JDK installation:
     set JAVA_HOME=c:\Program Files\Java\jdk1.8.0_202
+    
+properties:
+spring.datasource.url=jdbc:mysql://${MYSQL_HOST:remotemysql.com}:3306/9yaCBPpb7N?serverTimezone=Europe/Lisbon&useLegacyDatetimeCode=false
+spring.datasource.username=9yaCBPpb7N
+spring.datasource.password=2EoCMAUgrV 

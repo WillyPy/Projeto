@@ -1,37 +1,36 @@
 package pt.iade.citysos.models;
+
 import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.Table;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="empresa")
-public class Empresa {
-    
+@Table(name = "tipo_pedido")
+public class TipoPedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="e_id")
+    @Column(name = "tip_ped_id")
     private int id;
-    @Column(name="e_nome")
+    @Column(name = "tip_nome")
     private String nome;
-    @Column(name="e_regiao")
-    private String regiao;
-    
-    @OneToMany
-    @JoinColumn(name="pedido_e_id")
-    private List<Pedido> pedidos;
 
-    public Empresa(int id, String nome, String password){
+    @OneToMany
+    @JoinColumn(name="pedido_tip_ped_id")
+    private List<Pedido> pedidos;
+    
+    public TipoPedido(int id, String nome){
         id = this.id;
         nome = this.nome;
-        password =  this.regiao;
     }
 
-    public String getNome() { return nome; }
-    public String getRegiao(){ return regiao; }
+    public String getNome(){ return nome; }
+
+    
 }
