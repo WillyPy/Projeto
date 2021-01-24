@@ -3,7 +3,7 @@ package pt.iade.citysos.models;
 public enum EstadoPedido {
     APROVADO(true),
     NAO_APROVADO(false),
-    EM_ESPERA(false);
+    SUBMETIDO(false);
  
     private boolean aceite;
 

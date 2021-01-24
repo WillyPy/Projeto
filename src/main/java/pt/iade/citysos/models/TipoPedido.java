@@ -22,7 +22,7 @@ public class TipoPedido {
     private String nome;
 
     @OneToMany
-    @JoinColumn(name="pedido_tip_ped_id")
+    @JoinColumn(name="p_tip_ped_id")
     private List<Pedido> pedidos;
     
     public TipoPedido(int id, String nome){

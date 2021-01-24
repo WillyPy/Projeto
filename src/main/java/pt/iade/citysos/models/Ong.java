@@ -28,7 +28,7 @@ public class Ong {
     private Empresa empresas;
     
     @OneToMany
-    @JoinColumn(name="pedido_ong_id")
+    @JoinColumn(name="p_ong_id")
     private List<Pedido> pedidos;
 
     public Ong(int id, String nome){
