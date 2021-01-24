@@ -23,8 +23,8 @@ public class Empresa {
     private String regiao;
     
     @OneToMany
-    @JoinColumn(name="pedido_e_id")
-    private List<Pedido> pedidos;
+    @JoinColumn(name="ep_e_id")
+    private List<EmpresaPedido> publicacao;
 
     public Empresa(int id, String nome, String password){
         id = this.id;
