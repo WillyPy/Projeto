@@ -4,4 +4,5 @@ import pt.iade.citysos.models.Empresa;
 
 public interface EmpresaRepository extends CrudRepository<Empresa, Integer> {
     
+    
 }
