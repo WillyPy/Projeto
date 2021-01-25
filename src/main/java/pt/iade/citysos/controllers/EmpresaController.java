@@ -12,9 +12,10 @@ import pt.iade.citysos.models.repositories.EmpresaRepository;
 @RestController
 @RequestMapping(path="/api/Empresa")
 public class EmpresaController {
-    private Logger logger = LoggerFactory.getLogger(EmpresaController.class);
+    private Logger logger = LoggerFactory.getLogger(EmpresaController.class); 
     @Autowired
     private EmpresaRepository empresaRepository;
+
     @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Empresa> getEmpresas(){
         logger.info("sending all");
