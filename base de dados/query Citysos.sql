@@ -1,2 +1,2 @@
 select *
-from pedido;
+from estado_pedido;
