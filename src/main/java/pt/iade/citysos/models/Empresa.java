@@ -26,12 +26,15 @@ public class Empresa {
     @JoinColumn(name="ep_e_id")
     private List<EmpresaPedido> publicacao;
 
-    public Empresa(int id, String nome, String password){
+    public Empresa(){}
+
+    public Empresa(int id, String nome, String região){
         id = this.id;
         nome = this.nome;
-        password =  this.regiao;
+        região =  this.regiao;
     }
 
+    public int getId(){ return id;}
     public String getNome() { return nome; }
     public String getRegiao(){ return regiao; }
 }

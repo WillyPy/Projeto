@@ -1,19 +1,19 @@
 header, main, footer, main section, nav {
     padding: 10px;
-    margin: 10px;
+    margin: 60px;
     text-align:center;
     color: white;
  }
  nav { background-color:green;}
- header {  background-color: red; }
+ header {  background-color: rgb(211, 162, 162); }
  main { 
-    background-color: orange; 
+    background-color: rgb(196, 157, 135); 
     display: flex;
     flex-wrap: wrap;
   }
- footer { background-color: magenta; }
+ footer { background-color: rgb(88, 86, 88); }
 
  main > section {
-    background-color: blue;
+    background-color: rgb(93, 93, 235);
     width: 18%;
  }
