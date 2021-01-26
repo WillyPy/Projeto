@@ -1,15 +1,16 @@
 package pt.iade.citysos.models;
 
 public enum TipoPedido {
-        ESCOLA_PRIMARIA(false),
-        ESCOLA_SECUNDARIA(false),
-        FACULDADE(false);
-        CRECHE(false),
+    CRECHE(false),    
+    ESCOLA_PRIMARIA(false),
+    ESCOLA_SECUNDARIA(false),
+    FACULDADE(false);
     
-        private boolean tipo;
-        
-        private TipoPedido(boolean tipo){
-            tipo = this.tipo;
-        }
-        public boolean getTipo(){ return tipo; }
+
+    private boolean tipo;
+    
+    private TipoPedido(boolean tipo){
+        tipo = this.tipo;
+    }
+    public boolean getTipo(){ return tipo; }
 }

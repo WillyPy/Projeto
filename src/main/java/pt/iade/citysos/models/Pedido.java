@@ -43,5 +43,5 @@ public class Pedido {
     }
     
 
-    public EstadoPedido getEstado(){ return estado; }
+    //public EstadoPedido getEstado(){ return estado; }
 }

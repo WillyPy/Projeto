@@ -8,4 +8,4 @@ then you must set the path to your JDK installation:
 properties:
 spring.datasource.url=jdbc:mysql://${MYSQL_HOST:remotemysql.com}:3306/9yaCBPpb7N?serverTimezone=Europe/Lisbon&useLegacyDatetimeCode=false
 spring.datasource.username=9yaCBPpb7N
-spring.datasource.password=2EoCMAUgrV 
+spring.datasource.password=2EoCMAUgrV
