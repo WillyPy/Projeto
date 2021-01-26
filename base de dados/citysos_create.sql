@@ -3,12 +3,12 @@ use citysos;
 
 create table empresa (e_id int not null auto_increment,
 						e_nome varchar(30) not null,
-                        e_regiao varchar(10) default'Angola',
                         primary key (e_id));
                         
 create table ong (ong_id int auto_increment not null,
 					ong_nome varchar(30) not null ,
-					ong_e_id int unique,
+                    ong_regiao varchar(10) default'Angola',
+					ong_e_id int,
 					primary key (ong_id),
                     foreign key(ong_e_id) references empresa(e_id)ON DELETE NO ACTION ON UPDATE NO ACTION);
  
@@ -30,13 +30,14 @@ create table tipo_pedido(tip_ped_id int not null auto_increment,
 						foreign key (p_ong_id) references ong(ong_id)ON DELETE NO ACTION ON UPDATE NO ACTION);
  
 create table empresa_pedido(ep_id int not null auto_increment,
-							ep_data datetime not null,
-							ep_e_id int,
-                            ep_p_id int,
-							ep_est_id int,
-                            primary key(ep_id),
-                            foreign key(ep_e_id) references empresa(e_id)ON DELETE NO ACTION ON UPDATE NO ACTION,
-							foreign key(ep_p_id) references pedido(p_id)ON DELETE NO ACTION ON UPDATE NO ACTION,
-							foreign key(ep_est_id) references estado_pedido(est_id)ON DELETE NO ACTION ON UPDATE NO ACTION);
-                                
-commit;
+								ep_data datetime not null,
+                                ep_e_id int,
+                                ep_p_id int,
+                                ep_est_id int,
+                                primary key(ep_id),
+                                foreign key(ep_e_id) references empresa(e_id)ON DELETE NO ACTION ON UPDATE NO ACTION,
+								foreign key(ep_p_id) references pedido(p_id)ON DELETE NO ACTION ON UPDATE NO ACTION,
+								foreign key(ep_est_id) references estado_pedido(est_id)ON DELETE NO ACTION ON UPDATE NO ACTION);
+
+
+

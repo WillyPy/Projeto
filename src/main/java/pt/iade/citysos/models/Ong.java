@@ -20,9 +20,13 @@ public class Ong {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ong_id")
     private int id;
+    
     @Column(name="ong_nome")
     private String nome;
     
+    @Column(name="ong_regiao")
+    private String regiao;
+
     @OneToOne
     @JoinColumn(name="ong_e_id")
     private Empresa empresas;
@@ -33,9 +37,10 @@ public class Ong {
 
     public Ong(){}
     
-    public Ong(int id, String nome){
-        id = this.id;
-        nome = this.nome;
+    public Ong(int id, String nome, String regiao) {
+        this.id = id;
+        this.nome = nome;
+        this.regiao = regiao;
     }
 
     public int getId(){ return id; }
@@ -45,6 +50,10 @@ public class Ong {
     public String getNome(){ return nome; }
     public void setNome( String nome){
         nome = this.nome;
+    }
+    public String getRegiao(){ return regiao; }
+    public void setRegiao(String regiao){
+    	this.regiao = regiao;
     }
     public List<Pedido> getPedido(){ return pedidos; }
 }

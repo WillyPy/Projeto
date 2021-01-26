@@ -25,7 +25,7 @@ function showPedidos(pedidos) {
     for (let pedido of pedidos) {
         html += "<section onclick='showpedido("+pedido.id+")'>"+
         "<h3>"+pedido.tipoPedido.nome+"</h3>"+
-        "<p> Artista: "+pedido.ong.name+"</p></section>";
+        "<p> Ong: "+pedido.ong.name+"</p></section>";
     }
     elemMain.innerHTML = html;
 }

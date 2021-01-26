@@ -21,19 +21,15 @@ public class Empresa {
     @Column(name="e_nome")
     private String nome;
 
-    @Column(name="e_regiao")
-    private String regiao;
-    
     @OneToMany
     @JoinColumn(name="ep_e_id")
     private List<EmpresaPedido> publicacao;
 
     public Empresa(){}
 
-    public Empresa(int id, String nome, String regiao){
+    public Empresa(int id, String nome){
         id = this.id;
         nome = this.nome;
-        regiao = this.regiao;
     }
 
     public int getId(){ return id; }

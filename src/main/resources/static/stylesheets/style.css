@@ -2,7 +2,7 @@ header, main,body, footer, main section, nav {
     padding: 10px;
     margin: 60px;
     text-align:center;
-    color: white;
+    color: rgb(185, 126, 126);
  }
  nav { background-color:green;}
  header {  background-color: rgb(211, 162, 162); }
