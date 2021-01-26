@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="stylesheets/style.css">
         <link rel="stylesheet" href="stylesheets/album.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="javascripts/addAlbum.js"></script>
+        <script src="javascripts/sendPedido.js"></script>
     </head>
     <body>
         <header> Efectue o seu pedido  </header>
@@ -13,8 +13,13 @@
         <main >
 
             <h2>Título: <input type="text" id="title"></h2>
-            <!-- <h2>URL da Imagem: <input type="url" id="cover"></h2> -->
-            <h2>Artista: <select id="artist"></select></h2>
+            <h2>Tipo de pedido: <select id="tipo_pedido">
+                <option value="Creche">Creche</option>
+                <option value="Escola Primaria">Escola Primaria</option>
+                <option value="Escola Secundaria">Escola Secundaria</option>
+                <option value="Universiade">Universiade</option>
+                <option value="Biblioteca">Biblioteca</option>
+            </select></h2>
             <h2><input type="button" value="Adicionar" 
                 onclick="addAlbum()"></h2>
         </main>

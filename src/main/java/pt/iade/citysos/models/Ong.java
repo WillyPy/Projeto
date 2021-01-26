@@ -31,6 +31,8 @@ public class Ong {
     @JoinColumn(name="p_ong_id")
     private List<Pedido> pedidos;
 
+    public Ong(){}
+    
     public Ong(int id, String nome){
         id = this.id;
         nome = this.nome;
