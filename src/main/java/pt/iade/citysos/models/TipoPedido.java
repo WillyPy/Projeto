@@ -35,4 +35,10 @@ public class TipoPedido {
     public String getNome(){ return nome; }
 
     
+        private boolean tipo;
+        
+        private TipoPedido(boolean tipo){
+            tipo = this.tipo;
+        }
+        public boolean getTipo(){ return tipo; }
 }
