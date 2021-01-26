@@ -1,6 +1,5 @@
-drop database citysos;
 create database citysos;
-use CitySos;
+use citysos;
 
 create table empresa (e_id int not null auto_increment,
 						e_nome varchar(30) not null,
@@ -13,7 +12,7 @@ create table ong (ong_id int auto_increment not null,
 					primary key (ong_id),
                     foreign key(ong_e_id) references empresa(e_id)ON DELETE NO ACTION ON UPDATE NO ACTION);
  
- create table estado_pedido(est_id int not null,
+create table estado_pedido(est_id int not null,
 							est_estado varchar(15) default 'Submetido',
                             primary key(est_id)
                             );
