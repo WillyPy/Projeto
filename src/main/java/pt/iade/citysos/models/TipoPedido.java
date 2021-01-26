@@ -21,9 +21,10 @@ public class TipoPedido {
     @Column(name = "tip_ped_nome")
     private String nome;
 
+    
     @OneToMany
-    @JoinColumn(name="p_tip_ped_nome")
-    private List<Pedido> pedidos;
+    @JoinColumn(name="p_tip_ped_id")
+    private List<Pedido> tipPedido;
     
     public TipoPedido(){}
 

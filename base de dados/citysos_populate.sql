@@ -17,16 +17,16 @@ insert into ong (ong_nome, ong_e_id) values ('Ajudante Lda',6);
 insert into estado_pedido(est_id, est_estado) values(0,'SUBMETIDO');
 
 /*tipo de pedido*/
-insert into tipo_pedido (tip_ped_id, tip_ped_nome) values (0,'Creche');
-insert into tipo_pedido (tip_ped_id, tip_ped_nome) values (1,'Escola Primaria');
-insert into tipo_pedido (tip_ped_id, tip_ped_nome) values (2,'Escola Secundaria');
-insert into tipo_pedido (tip_ped_id, tip_ped_nome) values (3,'Universiade');
-insert into tipo_pedido (tip_ped_id, tip_ped_nome) values (4,'Biblioteca');
+insert into tipo_pedido (tip_ped_nome) values ('Creche');
+insert into tipo_pedido (tip_ped_nome) values ('Escola Primaria');
+insert into tipo_pedido (tip_ped_nome) values ('Escola Secundaria');
+insert into tipo_pedido (tip_ped_nome) values ('Universiade');
+insert into tipo_pedido (tip_ped_nome) values ('Biblioteca');
 
 
-/*pedidos
-insert into pedido (p_tipo, p_cart_sol, p_ong_id, p_tip_ped_nome) values ('example','example',1,);
-*/
+insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('example',1,1);
+insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('example2',2,2);
+
 
 /*
 insert into empresa_pedido(ep_data, ep_e_id, ep_p_id, ep_est_id) values(str_to_date('2020.1.01','%Y.%m.%d'),1,1,0);
