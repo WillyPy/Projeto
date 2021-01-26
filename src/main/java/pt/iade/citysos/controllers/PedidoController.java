@@ -29,14 +29,12 @@ public class PedidoController {
     }
     
     @GetMapping(path="/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Pedido getEmp(@PathVariable int id){
+    public Pedido getPed(@PathVariable int id){
         logger.info("find by id" +id);
-        Optional<Pedido> _em = pedidoRepository.findById(id);
-        if (!_em.isPresent())
-            throw new NotFoundException("" + id, "Empresa", "id");
+        Optional<Pedido> _ped = pedidoRepository.findById(id);
+        if (!_ped.isPresent())
+            throw new NotFoundException("" + id, "Pedido", "id");
         else
-            return _em.get();
+            return _ped.get();
     }
-
-    
 }

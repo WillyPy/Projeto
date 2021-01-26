@@ -18,6 +18,7 @@ import pt.iade.citysos.models.repositories.OngRepository;
 public class OngController {
     private Logger logger = org.slf4j.LoggerFactory.getLogger(OngController.class);
     @Autowired
+    
     private OngRepository ongRepository;
     @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Ong> getOng(){
@@ -26,12 +27,12 @@ public class OngController {
     }
 
     @GetMapping(path="/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Ong getEmp(@PathVariable int id){
+    public Ong getOng(@PathVariable int id){
         logger.info("find by id" +id);
-        Optional<Ong> _em = ongRepository.findById(id);
-        if (!_em.isPresent())
-            throw new NotFoundException("" + id, "Empresa", "id");
+        Optional<Ong> _ong = ongRepository.findById(id);
+        if (!_ong.isPresent())
+            throw new NotFoundException("" + id, "Ong", "id");
         else
-            return _em.get();
+            return _ong.get();
     }
 }

@@ -38,5 +38,13 @@ public class Ong {
         nome = this.nome;
     }
 
+    public int getId(){ return id; }
+    public void setId(int id){
+        id = this.id;
+    }
     public String getNome(){ return nome; }
+    public void setNome( String nome){
+        nome = this.nome;
+    }
+    public List<Pedido> getPedido(){ return pedidos; }
 }

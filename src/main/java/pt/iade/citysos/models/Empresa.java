@@ -17,8 +17,10 @@ public class Empresa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="e_id")
     private int id;
+
     @Column(name="e_nome")
     private String nome;
+
     @Column(name="e_regiao")
     private String regiao;
     
@@ -28,13 +30,23 @@ public class Empresa {
 
     public Empresa(){}
 
-    public Empresa(int id, String nome, String região){
+    public Empresa(int id, String nome, String regiao){
         id = this.id;
         nome = this.nome;
-        região =  this.regiao;
+        regiao = this.regiao;
     }
 
-    public int getId(){ return id;}
+    public int getId(){ return id; }
+    public void setId(int id){
+        id = this.id;
+    }
     public String getNome() { return nome; }
+    public void setNome(String nome){
+        nome = this.nome;
+    }
     public String getRegiao(){ return regiao; }
+    public void setRegiao(String regiao){
+        regiao = this.regiao;
+    }
+    public List<EmpresaPedido> getPublicacao(){ return publicacao; }
 }

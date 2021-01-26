@@ -18,9 +18,9 @@ public class TipoPedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "tip_ped_id")
     private int id;
+
     @Column(name = "tip_ped_nome")
     private String nome;
-
     
     @OneToMany
     @JoinColumn(name="p_tip_ped_id")
@@ -28,11 +28,18 @@ public class TipoPedido {
     
     public TipoPedido(){}
 
-    public TipoPedido(String nome){
+    public TipoPedido(int id, String nome){
+        id = this.id;
         nome = this.nome;
     }
 
+    public int getId(){ return id; }
+    public void setId(int id){
+        id = this.id;
+    }
     public String getNome(){ return nome; }
-
-    
+    public void setNome(String nome){
+        nome = this.nome;
+    }
+    public List<Pedido> getTipoPedido(){ return tipPedido; }
 }
