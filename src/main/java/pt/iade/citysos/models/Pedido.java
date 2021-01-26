@@ -45,4 +45,6 @@ public class Pedido {
     public String getPub(){
         return carta;
     }
+
+    public EstadoPedido getEstado(){ return estado; }
 }
