@@ -19,8 +19,6 @@ public class Empresa {
     private int id;
     @Column(name="e_nome")
     private String nome;
-    @Column(name="e_regiao")
-    private String regiao;
     
     @OneToMany
     @JoinColumn(name="ep_e_id")
@@ -31,10 +29,8 @@ public class Empresa {
     public Empresa(int id, String nome, String região){
         id = this.id;
         nome = this.nome;
-        região =  this.regiao;
     }
 
     public int getId(){ return id;}
     public String getNome() { return nome; }
-    public String getRegiao(){ return regiao; }
 }

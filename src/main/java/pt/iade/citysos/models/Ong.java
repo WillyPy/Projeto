@@ -22,7 +22,9 @@ public class Ong {
     private int id;
     @Column(name="ong_nome")
     private String nome;
-    
+    @Column(name="ong_regiao")
+    private String regiao;
+
     @OneToOne
     @JoinColumn(name="ong_e_id")
     private Empresa empresas;
@@ -33,10 +35,11 @@ public class Ong {
 
     public Ong(){}
     
-    public Ong(int id, String nome){
-        id = this.id;
-        nome = this.nome;
+    public Ong(String nome, String regiao) {
+        this.nome = nome;
+        this.regiao = regiao;
     }
-
     public String getNome(){ return nome; }
+
+    public String getRegiao(){ return regiao; }
 }

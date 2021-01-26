@@ -3,7 +3,6 @@
         <meta charset="UTF-8">
         <title> JS </title>
         <link rel="stylesheet" href="stylesheets/style.css">
-        <link rel="stylesheet" href="stylesheets/album.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="javascripts/sendPedido.js"></script>
     </head>
@@ -11,17 +10,20 @@
         <header> Efectue o seu pedido  </header>
         <nav><a href="index.html">Regressar</a></nav>       
         <main >
-            <h2>Tipo de pedido: <select id="tipo_pedido">
+            <h2>Tipo de pedido: <select id="tipop">
                 <option value="Creche">Creche</option>
                 <option value="Escola Primaria">Escola Primaria</option>
                 <option value="Escola Secundaria">Escola Secundaria</option>
                 <option value="Universiade">Universiade</option>
                 <option value="Biblioteca">Biblioteca</option>
             </select></h2>
+            <h2>Carta: <input type="text" id="carta"></h2>
+            <h2>Ong: <input type="text" id="ong"></h2>
+            <h2>Região: <input type="text" id="regiao"></h2>
             <h2><input type="button" value="Adicionar" 
-                onclick="addAlbum()"></h2>
+                onclick="sendPedido()"></h2>
         </main>
-        <h2>Carta: <input type="text" id="title"></h2>
+        
         <footer> FOOTER </footer>
     </body>
     </html>

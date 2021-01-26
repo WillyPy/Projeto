@@ -14,6 +14,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity
 @Table(name = "pedido")
@@ -33,30 +35,29 @@ public class Pedido {
     //@Enumerated(EnumType.ORDINAL)
     //private EstadoPedido estado;
 
+
     @ManyToOne
     @JoinColumn(name="p_ong_id")
     private Ong ong; 
-
+    
     @ManyToOne
     @JoinColumn(name="p_tip_ped_id")
-    private TipoPedido tipoPedido; 
-    public Pedido(){}
-
-    public Pedido(int id,  String carta, int tipId) {
-        id = this.id;
-        carta = this.carta;
-    }
+    private TipoPedido tipoPedido;
     
-    public int getid(){
+    public Pedido(){}
+    
+    public int getId(){
         return id;
     }
-    public String getped(){
+    public String getPed(){
         return carta;
     }
     public TipoPedido getTipoPedido(){
         return tipoPedido;
     }
-    public Ong getong(){
+    public Ong getOng(){
         return ong;
     }
+    
+    
 }
