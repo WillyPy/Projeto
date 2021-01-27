@@ -40,9 +40,5 @@ public class Empresa {
     public void setNome(String nome){
         nome = this.nome;
     }
-    public String getRegiao(){ return regiao; }
-    public void setRegiao(String regiao){
-        regiao = this.regiao;
-    }
     public List<EmpresaPedido> getPublicacao(){ return publicacao; }
 }
