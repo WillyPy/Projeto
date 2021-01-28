@@ -25,13 +25,13 @@ function showPedidos(pedidos) {
     for (let pedido of pedidos) {
         html += "<section onclick='showpedido("+pedido.id+")'>"+
         "<h3>"+pedido.tipoPedido.nome+"</h3>"+
-        "<p> Ong: "+pedido.ong.name+"</p></section>";
+        "<h3> ong: "+pedido.ong.nome+"</h3></section>";
     }
     elemMain.innerHTML = html;
 }
 
 
-function showPedido(pedidoId) {
+/*function showPedido(pedidoId) {
     sessionStorage.setItem("pedidoId",pedidoId);
-    window.location = "album.html";
-}
+    window.location = "pedido.html";
+}*/

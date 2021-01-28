@@ -33,27 +33,17 @@ public class Ong {
     
     @OneToMany
     @JoinColumn(name="p_ong_id")
-    private List<Pedido> pedidos;
+    private List<Pedido> pedido; 
 
     public Ong(){}
     
-    public Ong(int id, String nome, String regiao) {
-        this.id = id;
+    public Ong(String nome, String regiao) {
         this.nome = nome;
         this.regiao = regiao;
     }
-
+    
     public int getId(){ return id; }
-    public void setId(int id){
-        id = this.id;
-    }
     public String getNome(){ return nome; }
-    public void setNome( String nome){
-        nome = this.nome;
-    }
     public String getRegiao(){ return regiao; }
-    public void setRegiao(String regiao){
-    	this.regiao = regiao;
-    }
-    public List<Pedido> getPedido(){ return pedidos; }
+    
 }

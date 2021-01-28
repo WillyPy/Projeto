@@ -28,18 +28,12 @@ public class TipoPedido {
     
     public TipoPedido(){}
 
-    public TipoPedido(int id, String nome){
-        id = this.id;
-        nome = this.nome;
-    }
-
-    public int getId(){ return id; }
-    public void setId(int id){
-        id = this.id;
-    }
     public String getNome(){ return nome; }
-    public void setNome(String nome){
-        nome = this.nome;
+    public int getId(){
+        return id;
     }
-    public List<Pedido> getTipoPedido(){ return tipPedido; }
+    public TipoPedido( String nome) {
+        this.nome = nome;
+    }
+    
 }

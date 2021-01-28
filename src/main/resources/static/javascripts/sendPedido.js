@@ -1,12 +1,12 @@
 async function sendPedido() {
     try {
-        let pedido = {
-            carta: document.getElementById("carta").value,
-            ong:{ nome: parseInt(document.getElementById("ong").value),
-                regiao: parseInt(document.getElementById("regiao").value)},
+        let pedido = { 
+            ong:{ nome: document.getElementById("ong").value,
+                regiao: document.getElementById("regiao").value},
             tipoPedido: document.getElementById("tipop").value,
+            ped: document.getElementById("carta").value,
         }
-        alert(JSON.stringify(ad));
+        alert(JSON.stringify(pedido));
         let result = await $.ajax({
             url: "/api/Pedido",
             method: "post",

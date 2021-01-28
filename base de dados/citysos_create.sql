@@ -1,3 +1,4 @@
+
 create database citysos;
 use citysos;
 

@@ -33,16 +33,9 @@ public class Empresa {
     }
 
     public int getId(){ return id; }
-    public void setId(int id){
-        id = this.id;
-    }
+    
     public String getNome() { return nome; }
-    public void setNome(String nome){
-        nome = this.nome;
-    }
-    public String getRegiao(){ return regiao; }
-    public void setRegiao(String regiao){
-        regiao = this.regiao;
-    }
-    public List<EmpresaPedido> getPublicacao(){ return publicacao; }
+    
+    
+    
 }

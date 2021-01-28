@@ -8,8 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import pt.iade.citysos.models.Pedido;
 import pt.iade.citysos.models.exceptions.NotFoundException;
 import pt.iade.citysos.models.repositories.PedidoRepository;
@@ -36,5 +39,11 @@ public class PedidoController {
             throw new NotFoundException("" + id, "Pedido", "id");
         else
             return _ped.get();
+    }
+
+    @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Pedido sendPed(@RequestBody String newPedido) {
+        Pedido pedido = pedidoRepository.save(newPedido);
+        return pedido;
     }
 }

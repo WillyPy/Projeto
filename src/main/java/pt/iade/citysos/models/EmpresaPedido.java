@@ -50,7 +50,5 @@ public class EmpresaPedido {
     public Date getData(){ return data; }
 
     public EstadoPedido getEstado(){ return estado; }
-    public void setEstado(EstadoPedido estado){
-        estado = this.estado;
-    }
+    
 }
