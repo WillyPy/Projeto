@@ -37,10 +37,12 @@ public class Pedido {
 
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name="p_ong_id")
     private Ong ong; 
     
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name="p_tip_ped_id")
     private TipoPedido tipoPedido;
     
