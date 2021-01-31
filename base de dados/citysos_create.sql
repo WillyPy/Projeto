@@ -40,5 +40,53 @@ create table empresa_pedido(ep_id int not null auto_increment,
 								foreign key(ep_p_id) references pedido(p_id)ON DELETE NO ACTION ON UPDATE NO ACTION,
 								foreign key(ep_est_id) references estado_pedido(est_id)ON DELETE NO ACTION ON UPDATE NO ACTION);
 
+# create Stored Procedures
+DELIMITER //
+CREATE PROCEDURE CountEmpresas()
+BEGIN
+    declare n_empresas int default 0;
+    select count(*) into n_empresas
+    from empresa;
+    select n_empresas from dual;
+END //
+DELIMITER ;
 
+DELIMITER //
+CREATE PROCEDURE CountPedidos()
+BEGIN
+	declare n_pedidos int default 0;
+    select count(*) into n_pedidos
+    from pedido;
+    select n_pedidos from dual;
+END //
+DELIMITER ;
 
+DELIMITER //
+CREATE PROCEDURE CountSubmetidos()
+BEGIN
+	declare n_pedidos int default 0;
+    declare str varchar(40);
+    
+    set str = 'O número de pedidos submetidos é: ';
+    select count(*) into n_pedidos
+    from empresa_pedido
+    where ep_est_id = 0;
+    select str, n_pedidos from dual;
+END //
+DELIMITER ;
+
+DELIMITER //
+CREATE PROCEDURE GetEmpresas()
+BEGIN
+	select e_nome as Nome from empresa;
+END //
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE GetOngs()
+BEGIN
+	select ong_nome as Nome, ong_regiao as Regiao
+    from ong;
+END //
+DELIMITER ;
