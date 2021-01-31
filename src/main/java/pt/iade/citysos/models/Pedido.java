@@ -14,6 +14,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+
 
 
 
@@ -37,12 +40,12 @@ public class Pedido {
 
 
     @ManyToOne
-    @JsonIgnore
+    @JsonIgnoreProperties({"id"})
     @JoinColumn(name="p_ong_id")
     private Ong ong; 
     
     @ManyToOne
-    @JsonIgnore
+    @JsonIgnoreProperties({"id"})
     @JoinColumn(name="p_tip_ped_id")
     private TipoPedido tipoPedido;
     

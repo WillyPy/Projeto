@@ -23,15 +23,36 @@ function showPedidos(pedidos) {
     let elemMain = document.getElementById("main");
     let html ="";
     for (let pedido of pedidos) {
-        html += "<section onclick='showpedido("+pedido.id+")'>"+
+        html += "<section onclick='showPedido("+pedido.id+")'>"+
         "<h3>"+pedido.tipoPedido.nome+"</h3>"+
         "<h3> ong: "+pedido.ong.nome+"</h3></section>";
+        
     }
     elemMain.innerHTML = html;
 }
 
 
-/*function showPedido(pedidoId) {
+function showPedido(pedidoId) {
     sessionStorage.setItem("pedidoId",pedidoId);
     window.location = "pedido.html";
-}*/
+}
+
+
+async function filterTipo() {
+    try {
+        let tipoPedido = document.getElementById("tipoPedido").value;
+        let pedido = await $.ajax({
+            url: "/api/Pedido/filter_tipo?tipo=" + tipoPedido,
+            method: "get",
+            dataType: "json"
+        });
+        showAds(pedido);
+    } catch (err) {
+        let elemMain = document.getElementById("main");
+        console.log(err);
+        elemMain.innerHTML = "<h1> Página não está disponível</h1>" +
+            "<h2> Por favor tente mais tarde</h2>";
+    }
+
+}
+

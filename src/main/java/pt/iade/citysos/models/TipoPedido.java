@@ -35,5 +35,4 @@ public class TipoPedido {
     public TipoPedido( String nome) {
         this.nome = nome;
     }
-    
 }

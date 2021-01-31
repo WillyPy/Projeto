@@ -1,5 +1,6 @@
 package pt.iade.citysos.controllers;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import pt.iade.citysos.models.Pedido;
@@ -46,4 +48,12 @@ public class PedidoController {
         Pedido pedido = pedidoRepository.save(newPedido);
         return pedido;
     }
+
+    @GetMapping(path = "/filter_tipo", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Pedido> searchPedTipo(@RequestParam(value = "tipoPedido", defaultValue = "") String tipoPedido) {
+    logger.info("Sending pedidos with tipo: " + tipoPedido);
+    ArrayList<Pedido> ped = (ArrayList<Pedido>) getPedido();
+    ped.removeIf((p) -> !(p.getTipoPedido().getNome().contains(tipoPedido)));
+    return ped;
+}
 }
