@@ -1,6 +1,5 @@
 package pt.iade.citysos.controllers;
 
-import java.util.ArrayList;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pt.iade.citysos.models.Pedido;
 import pt.iade.citysos.models.exceptions.NotFoundException;
 import pt.iade.citysos.models.repositories.PedidoRepository;
+import pt.iade.citysos.models.views.PedidoView;
 
 @RestController
 @RequestMapping(path="/api/Pedido")
@@ -32,7 +32,7 @@ public class PedidoController {
         logger.info("sending all");
         return pedidoRepository.findAll();
     }
-    
+
     @GetMapping(path="/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Pedido getPed(@PathVariable int id){
         logger.info("find by id" +id);
@@ -43,17 +43,25 @@ public class PedidoController {
             return _ped.get();
     }
 
-    @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Pedido sendPed(@RequestBody String newPedido) {
+    
+
+    @GetMapping(path = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<PedidoView> getAllPedidos() {
+        logger.info("Todos os Pedidos");
+        return pedidoRepository.findAllPedidos();
+    }
+
+    @GetMapping(path = "/filtrar_tipo", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<PedidoView> searchAdCategory(@RequestParam(value = "tipo", defaultValue = "") String tipoPedKey) {
+        logger.info("Pedido com o seu tipo: " + tipoPedKey);
+        return pedidoRepository.findPedidoByTipo(tipoPedKey);
+    }
+
+    @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Pedido savePedido(@RequestBody Pedido newPedido) {
+        logger.info("Saving album with title: "+newPedido);
         Pedido pedido = pedidoRepository.save(newPedido);
         return pedido;
     }
 
-    @GetMapping(path = "/filter_tipo", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Pedido> searchPedTipo(@RequestParam(value = "tipoPedido", defaultValue = "") String tipoPedido) {
-    logger.info("Sending pedidos with tipo: " + tipoPedido);
-    ArrayList<Pedido> ped = (ArrayList<Pedido>) getPedido();
-    ped.removeIf((p) -> !(p.getTipoPedido().getNome().contains(tipoPedido)));
-    return ped;
-}
 }

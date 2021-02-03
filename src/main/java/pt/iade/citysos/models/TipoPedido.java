@@ -28,10 +28,11 @@ public class TipoPedido {
     
     public TipoPedido(){}
 
-    public String getNome(){ return nome; }
     public int getId(){
         return id;
     }
+    public String getNome(){ return nome; }
+    
     public TipoPedido( String nome) {
         this.nome = nome;
     }

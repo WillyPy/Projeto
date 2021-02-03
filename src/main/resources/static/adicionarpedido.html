@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> JS </title>
+        <title> Adicionar Pedido </title>
         <link rel="stylesheet" href="stylesheets/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="javascripts/sendPedido.js"></script>
@@ -10,16 +10,9 @@
         <header> Efectue o seu pedido  </header>
         <nav><a href="index.html">Regressar</a></nav>       
         <main >
-            <h2>Tipo de pedido: <select id="tipop">
-                <option value="Creche">Creche</option>
-                <option value="Escola Primaria">Escola Primaria</option>
-                <option value="Escola Secundaria">Escola Secundaria</option>
-                <option value="Universiade">Universiade</option>
-                <option value="Biblioteca">Biblioteca</option>
-            </select></h2>
-            <h2>Carta: <input type="text" id="carta"></h2>
-            <h2>Ong: <input type="text" id="ong"></h2>
-            <h2>Região: <input type="text" id="regiao"></h2>
+            <h2>Tipo: <select id="tipos"></select></h2>
+            <h2>Ong: <Select type="text" id="ongs"></Select></h2>
+            <h2>Detalhes: <input type="text" id="carta"></h2>
             <h2><input type="button" value="Send" 
                 onclick="sendPedido()"></h2>
         </main>

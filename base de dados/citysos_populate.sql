@@ -28,7 +28,9 @@ insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('example2',2,2);
 insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('example3',3,3);
 insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('example4',4,4);
 insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('example5',5,5);
-
+insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('example6',1,1);
+insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('example7',4,1);
+insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('example7',4,3);
 
 
 /*

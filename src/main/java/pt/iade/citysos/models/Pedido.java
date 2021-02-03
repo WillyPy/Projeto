@@ -1,6 +1,5 @@
 package pt.iade.citysos.models;
 
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,14 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-
-
-
 
 @Entity
 @Table(name = "pedido")
@@ -25,22 +18,15 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="p_id")
     private int id;
+    
     @Column(name="p_cart_sol")
     private String carta;
     
-
-    @OneToMany
-    @JoinColumn(name = "ep_p_id")
-    private List<EmpresaPedido> publicacao;
-
-
     @ManyToOne
-    @JsonIgnoreProperties({"id"})
     @JoinColumn(name="p_ong_id")
     private Ong ong; 
     
     @ManyToOne
-    @JsonIgnoreProperties({"id"})
     @JoinColumn(name="p_tip_ped_id")
     private TipoPedido tipoPedido;
     
@@ -49,7 +35,7 @@ public class Pedido {
     public int getId(){
         return id;
     }
-    public String getPed(){
+    public String getCarta(){
         return carta;
     }
     
@@ -59,12 +45,6 @@ public class Pedido {
 
     public Ong getOng(){
         return ong;
-    }
-
-    public Pedido(String carta, String ongNome, String ongRegiao, String tipoPedido) {
-        this.carta = carta;
-        this.ong = new Ong(ongNome, ongRegiao);
-        this.tipoPedido = new TipoPedido(tipoPedido);
     }
 
 }
