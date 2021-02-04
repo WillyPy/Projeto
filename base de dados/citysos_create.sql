@@ -31,7 +31,7 @@ create table tipo_pedido(tip_ped_id int not null auto_increment,
 						foreign key (p_ong_id) references ong(ong_id)ON DELETE NO ACTION ON UPDATE NO ACTION);
  
 create table empresa_pedido(ep_id int not null auto_increment,
-								ep_data datetime not null,
+								ep_data datetime default current_timestamp,
                                 ep_e_id int,
                                 ep_p_id int,
                                 ep_est_id int,

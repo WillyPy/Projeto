@@ -31,6 +31,7 @@ insert into estado_pedido(est_id, est_estado) values(0,'SUBMETIDO');
 insert into estado_pedido(est_id,est_estado) values(1,'Rejeitado');
 insert into estado_pedido(est_id,est_estado) values(2,'Rejeitado');
 
+/*pedidos*/
 insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('
 Texto Exemplo de detalhes fornecidos para efectuar um pedido na plataforma
 com todos os detalhes necessarios.',5,5);
@@ -47,17 +48,16 @@ insert into pedido(p_cart_sol, p_ong_id, p_tip_ped_id) values ('
 Texto Exemplo de detalhes fornecidos para efectuar um pedido na plataforma
 com todos os detalhes necessarios.',1,4);
 
-insert into empresa_pedido(ep_date,ep_p_id,ep_est_id) values(sysdate(),1,0);
-insert into empresa_pedido(ep_date,ep_p_id,ep_est_id) values(sysdate(),2,0);
-insert into empresa_pedido(ep_date,ep_p_id,ep_est_id) values(sysdate(),3,0);
-insert into empresa_pedido(ep_date,ep_p_id,ep_est_id) values(sysdate(),4,0);
-insert into empresa_pedido(ep_date,ep_p_id,ep_est_id) values(sysdate(),5,0);
+
+insert into empresa_pedido(ep_data,ep_p_id,ep_est_id) values(sysdate(),1,0);
+insert into empresa_pedido(ep_data,ep_p_id,ep_est_id) values(sysdate(),2,0);
+insert into empresa_pedido(ep_data,ep_p_id,ep_est_id) values(sysdate(),3,0);
+insert into empresa_pedido(ep_data,ep_p_id,ep_est_id) values(sysdate(),4,0);
+insert into empresa_pedido(ep_p_id,ep_est_id) values(5,0);
 
 /*
 insert into empresa_pedido(ep_data, ep_e_id, ep_p_id, ep_est_id) values(str_to_date('2020.1.01','%Y.%m.%d'),1,1,0);
 */
 
-/*estados possiveis com o submetido sendo o padrão*/
-insert into estado_pedido(est_id,est_estado) values('1','Rejeitado');
-insert into estado_pedido(est_id,est_estado) values('2','Rejeitado');
+
 commit;
