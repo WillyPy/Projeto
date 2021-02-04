@@ -44,11 +44,14 @@ public class EmpresaPedido {
     }
     
     public int getId(){ return id; }
-    public void setId(int id){ 
-        id = this.id;
-    }
+
     public Date getData(){ return data; }
 
     public EstadoPedido getEstado(){ return estado; }
+
+    public EstadoPedido getEstadoPedido(){
+        return estado;
+
+    }
     
 }

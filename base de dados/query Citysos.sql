@@ -1,8 +1,10 @@
-select * from empresa;
+select * from empresa Join ong where e_id=ong_id
+;
 select * from pedido;
 select * from ong;
 select * from estado_pedido;
 select * from tipo_pedido;
+select sysdate();
 
 Update tipo_pedido
 set tip_ped_nome = 'Universidade'
@@ -36,6 +38,6 @@ call CountSubmetidos();
 
 call GetEmpresas();
 
-call GetOngs();
+call GeempresatOngs();
 
 show procedure status where db = 'citysos';

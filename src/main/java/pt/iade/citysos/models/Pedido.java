@@ -1,5 +1,6 @@
 package pt.iade.citysos.models;
 
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "pedido")
@@ -18,10 +20,14 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="p_id")
     private int id;
-    
+
     @Column(name="p_cart_sol")
     private String carta;
     
+    @OneToMany
+    @JoinColumn(name="ep_id")
+    private List<EmpresaPedido> empresaPedido;
+
     @ManyToOne
     @JoinColumn(name="p_ong_id")
     private Ong ong; 

@@ -4,24 +4,20 @@
         <title> JS </title>
         <link rel="stylesheet" href="stylesheets/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="javascripts/listagemPedidos.js"></script>
+        <script src="javascripts/index.js"></script>
     </head>
     <body>
-        <header > CitySos </header>
-          
-        <nav>
-            <a href="adicionarpedido.html">Fazer um pedido</a>
-            <a href="index.html">Ver todos</a>
-            
-            <section> 
-                
-                Tipo de construção: <input type="text" id="tipoPedido">
-                <input type="button" value="Filtrar" onclick="filterTipo()">
-            </section>
-        </nav>     
-        
+        <header > CitySos </header>    
         <main id="main">
-            
+            <section> 
+                <select id="empresa"></select>
+                <input type="button" value="Login Empresa" onclick="loginEmpresa().setSessionUser()">
+                <input type="button" value="Registrar" onclick="addEmpresa()">
+            </section>
+            <section>
+                <h2>Pagina Ong </h2>
+                <input type="button" value="Solicitar" onclick="loginOng()">
+            </section>
         </main>
         <footer> FOOTER </footer>
     </body>

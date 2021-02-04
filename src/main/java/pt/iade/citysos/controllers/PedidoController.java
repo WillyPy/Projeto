@@ -52,9 +52,14 @@ public class PedidoController {
     }
 
     @GetMapping(path = "/filtrar_tipo", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<PedidoView> searchAdCategory(@RequestParam(value = "tipo", defaultValue = "") String tipoPedKey) {
+    public Iterable<PedidoView> searchPedidoTipo(@RequestParam(value = "tipo", defaultValue = "") String tipoPedKey) {
         logger.info("Pedido com o seu tipo: " + tipoPedKey);
         return pedidoRepository.findPedidoByTipo(tipoPedKey);
+    }
+    @GetMapping(path = "/filtrar_ong", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<PedidoView> SerchPedidoOng(@RequestParam(value = "ong", defaultValue = "") String ongPedKey) {
+        logger.info("Pedido com o seu tipo: " + ongPedKey);
+        return pedidoRepository.findPedidoByOng(ongPedKey);
     }
 
     @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)

@@ -1,4 +1,4 @@
-window.onload = async function() {
+/*window.onload = async function() {
     try {
         let tipos = await $.ajax({
             url: "/api/tipopedido",
@@ -32,26 +32,25 @@ window.onload = async function() {
         console.log(err);
         // mensagem de erro para o utilizador      
     }
-}
+}*/
 
-async function sendPedido() {
+async function addOng() {
     try {
-        let pedido = {
-            carta: document.getElementById("carta").value,
-            ong: { id: parseInt(document.getElementById("ongs").value) },
-            tipoPedido: { id: parseInt(document.getElementById("tipos").value) }
+        let ong = {
+            nome: document.getElementById("nome").value,
+            regiao: document.getElementById("regiao").value
+        //empresa: { id: parseInt(document.getElementById("tipos").value) }
         }
-        console.log(JSON.stringify(pedido));
+        console.log(JSON.stringify(ong));
         let result = await $.ajax({
-            url: "/api/Pedido",
+            url: "/api/Ong",
             method: "post",
             dataType: "json",
-            data:JSON.stringify(pedido),
+            data:JSON.stringify(ong),
             contentType: "application/json"
         });
         console.log(JSON.stringify(result));
-        sessionStorage.setItem("pedidoId",result.id);
-        window.location = "pedidoOng.html";
+        window.location = "index.html";
     } catch(err) {
         console.log(err);
         // mensagem para o utilizador

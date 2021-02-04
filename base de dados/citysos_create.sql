@@ -1,4 +1,4 @@
-
+drop database citysos;
 create database citysos;
 use citysos;
 

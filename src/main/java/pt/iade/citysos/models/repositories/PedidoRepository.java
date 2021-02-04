@@ -23,5 +23,7 @@ public interface PedidoRepository extends CrudRepository<Pedido, Integer>{
     @Query(value = pedidoByTipoQuery, nativeQuery = true)
 	Iterable<PedidoView> findPedidoByTipo(@Param("tipopedKey") String tipopedKey);
 	
-    
+	String pedidoByOngQuery = activePedidoQuery + "AND ong_nome = :ongpedKey ";
+    @Query(value = pedidoByOngQuery, nativeQuery = true)
+	Iterable<PedidoView> findPedidoByOng(@Param("ongpedKey") String tipopedKey);
 }

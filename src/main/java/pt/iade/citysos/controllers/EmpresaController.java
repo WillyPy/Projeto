@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,5 +37,12 @@ public class EmpresaController {
             throw new NotFoundException("" + id, "Empresa", "id");
         else
             return _em.get();
+    }
+
+    @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Empresa registrarEmpresa(@RequestBody Empresa newEmpresa) {
+        logger.info("Add empresa with title: "+newEmpresa);
+        Empresa empresa = empresaRepository.save(newEmpresa);
+        return empresa;
     }
 }
