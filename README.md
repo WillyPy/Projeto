@@ -34,14 +34,14 @@ Foi neste contexto que tiramos a ideia de fazer este projeto.
 **Pré-condições:**
 -Estar logado como empresa(entidade que vai ajudar)
 
-### **Caso 3:Registrar a Ong**
+### **Caso 2:Registrar a Ong**
 
 -Assim que abre a plataforma é derigido a uma pagina e se não estiver registrada dereciona-se a secção de fazer o registro;
 -Assim inicia o processo de registro:
     -Nome,
     -Região;
     
-### **Caso 2:Fazer um Pedido**
+### **Caso 3:Fazer um Pedido**
 
 -A Ong após se Logar dericiona-se à secção de fazer um pedido a plataforma;
 -A Ong começa o processo de fazer um pedido:
@@ -51,7 +51,7 @@ Foi neste contexto que tiramos a ideia de fazer este projeto.
 **Pré-condições:**
 -Estar logado como Ong(entidade que solicita a ajuda).
 
-### **Caso 3:Verificar estado dos Pedidos feitos**
+### **Caso 4:Verificar estado dos Pedidos feitos**
 
 -A Ong direciona-se a area dos seus pedidos feitos e pode assim selecionar os seus pedidos e verificar os seus estados
 -Nesta area pode tambem filtar os pedido pelo seu tipo.
