@@ -1,7 +1,7 @@
 window.onload = async function() {
     try {
         let tipos = await $.ajax({
-            url: "/api/tipopedido",
+            url: "/api/tippedidos",
             method: "get",
             dataType: "json"
         });
@@ -18,7 +18,7 @@ window.onload = async function() {
 
     try {
         let ongs = await $.ajax({
-            url: "/api/Ong",
+            url: "/api/ongs",
             method: "get",
             dataType: "json"
         });
@@ -43,7 +43,7 @@ async function sendPedido() {
         }
         console.log(JSON.stringify(pedido));
         let result = await $.ajax({
-            url: "/api/Pedido",
+            url: "/api/pedidos",
             method: "post",
             dataType: "json",
             data:JSON.stringify(pedido),
@@ -51,6 +51,26 @@ async function sendPedido() {
         });
         console.log(JSON.stringify(result));
         sessionStorage.setItem("pedidoId",result.id);
+    } catch(err) {
+        console.log(err);
+        // mensagem para o utilizador
+    }
+
+    try {
+        let estado = {
+            pedido: { id: sessionStorage.getItem("pedidoId")},
+            estadoPedido: {id : 1},
+            data: new Date()
+        }
+        console.log(JSON.stringify(estado));
+        let result = await $.ajax({
+            url: "/api/empresaPedidos",
+            method: "post",
+            dataType: "json",
+            data:JSON.stringify(estado),
+            contentType: "application/json"
+        });
+        console.log(JSON.stringify(result));
         window.location = "pedidoOng.html";
     } catch(err) {
         console.log(err);

@@ -4,8 +4,7 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,32 +25,28 @@ public class EmpresaPedido {
     private Date data;
 
     @ManyToOne
+    @JoinColumn(name ="ep_est_id")
+    private EstadoPedido estadoPedido;
+
+    @ManyToOne
     @JoinColumn(name ="ep_p_id")
-    private Pedido pedidoId;
+    private Pedido pedido;
 
     @ManyToOne
     @JoinColumn(name = "ep_e_id")
-    private Empresa empresaId;
+    private Empresa empresa;    
 
-    //para ligar o Estado a base de dados... garantir que na base de dados o id começa em 0 e não em 1.
-    @Enumerated(EnumType.ORDINAL)
-    private EstadoPedido estado;
-
-    public EmpresaPedido(int id, Date data){
-        id = this.id;
-        data = this.data;
-        estado = EstadoPedido.SUBMETIDO;
-    }
+    public EmpresaPedido(){}
     
     public int getId(){ return id; }
 
     public Date getData(){ return data; }
 
-    public EstadoPedido getEstado(){ return estado; }
+    public Pedido getPedido(){return pedido;}
+    
+    public Empresa getEmpresa(){return empresa;}
 
     public EstadoPedido getEstadoPedido(){
-        return estado;
-
-    }
+        return estadoPedido;}
     
 }

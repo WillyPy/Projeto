@@ -12,7 +12,7 @@ import pt.iade.citysos.models.TipoPedido;
 import pt.iade.citysos.models.repositories.TipoPedidoRepository;
 
 @RestController
-@RequestMapping(path="/api/tipopedido")
+@RequestMapping(path="/api/tippedidos")
 public class TipoPedidoController {
     private Logger logger = LoggerFactory.getLogger(TipoPedidoController.class);
     @Autowired

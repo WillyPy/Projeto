@@ -52,5 +52,4 @@ public class Pedido {
     public Ong getOng(){
         return ong;
     }
-
 }

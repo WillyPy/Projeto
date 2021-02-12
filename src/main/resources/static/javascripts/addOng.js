@@ -43,7 +43,7 @@ async function addOng() {
         }
         console.log(JSON.stringify(ong));
         let result = await $.ajax({
-            url: "/api/Ong",
+            url: "/api/Ongs",
             method: "post",
             dataType: "json",
             data:JSON.stringify(ong),

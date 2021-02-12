@@ -18,11 +18,12 @@ import pt.iade.citysos.models.exceptions.NotFoundException;
 import pt.iade.citysos.models.repositories.EmpresaRepository;
 
 @RestController
-@RequestMapping(path="/api/Empresa")
+@RequestMapping(path="/api/empresas")
 public class EmpresaController {
     private Logger logger = LoggerFactory.getLogger(EmpresaController.class); 
     @Autowired
     private EmpresaRepository empresaRepository;
+
     @GetMapping(path="", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Empresa> getEmpresas(){
         logger.info("sending all");
@@ -45,4 +46,5 @@ public class EmpresaController {
         Empresa empresa = empresaRepository.save(newEmpresa);
         return empresa;
     }
+
 }

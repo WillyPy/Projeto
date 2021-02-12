@@ -20,7 +20,7 @@ import pt.iade.citysos.models.repositories.PedidoRepository;
 import pt.iade.citysos.models.views.PedidoView;
 
 @RestController
-@RequestMapping(path="/api/Pedido")
+@RequestMapping(path="/api/pedidos")
 public class PedidoController {
 
     private Logger logger = LoggerFactory.getLogger(PedidoController.class);
@@ -42,21 +42,26 @@ public class PedidoController {
         else
             return _ped.get();
     }
-
     
+    @GetMapping(path = "/ong/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<PedidoView> searchOngPedidos(@PathVariable int id) {
+        logger.info("Todos pedidos da ong: " + id);
+        return pedidoRepository.searchOngPedidos(id);
+    }
 
-    @GetMapping(path = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/ativos", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<PedidoView> getAllPedidos() {
         logger.info("Todos os Pedidos");
         return pedidoRepository.findAllPedidos();
     }
 
-    @GetMapping(path = "/filtrar_tipo", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/filtro/tipo", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<PedidoView> searchPedidoTipo(@RequestParam(value = "tipo", defaultValue = "") String tipoPedKey) {
         logger.info("Pedido com o seu tipo: " + tipoPedKey);
         return pedidoRepository.findPedidoByTipo(tipoPedKey);
     }
-    @GetMapping(path = "/filtrar_ong", produces = MediaType.APPLICATION_JSON_VALUE)
+
+    @GetMapping(path = "/filtro/ong", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<PedidoView> SerchPedidoOng(@RequestParam(value = "ong", defaultValue = "") String ongPedKey) {
         logger.info("Pedido com o seu tipo: " + ongPedKey);
         return pedidoRepository.findPedidoByOng(ongPedKey);
@@ -64,7 +69,7 @@ public class PedidoController {
 
     @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
     public Pedido savePedido(@RequestBody Pedido newPedido) {
-        logger.info("Saving album with title: "+newPedido);
+        logger.info("Saving pedido with title: "+newPedido);
         Pedido pedido = pedidoRepository.save(newPedido);
         return pedido;
     }

@@ -40,6 +40,7 @@ create table empresa_pedido(ep_id int not null auto_increment,
 								foreign key(ep_p_id) references pedido(p_id)ON DELETE NO ACTION ON UPDATE NO ACTION,
 								foreign key(ep_est_id) references estado_pedido(est_id)ON DELETE NO ACTION ON UPDATE NO ACTION);
 
+
 # create Stored Procedures
 DELIMITER //
 CREATE PROCEDURE CountEmpresas()
@@ -74,6 +75,7 @@ BEGIN
     select str, n_pedidos from dual;
 END //
 DELIMITER ;
+
 
 DELIMITER //
 CREATE PROCEDURE GetEmpresas()

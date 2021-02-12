@@ -5,7 +5,7 @@ async function addEmpresa() {
         }
         console.log(JSON.stringify(empresa));
         let result = await $.ajax({
-            url: "/api/Empresa",
+            url: "/api/empresas",
             method: "post",
             dataType: "json",
             data:JSON.stringify(empresa),

@@ -4,7 +4,7 @@ window.onload = async function() {
     try {
     
         let empresa = await $.ajax({
-            url: "/api/Empresa/"+empresaId,
+            url: "/api/empresas/"+empresaId,
             method: "get",
             dataType: "json"
         });
@@ -20,7 +20,7 @@ window.onload = async function() {
 async function loadPedidos() {
     try {
         let pedidos = await $.ajax({
-            url: "/api/Pedido/all",
+            url: "/api/pedidos/ativos",
             method: "get",
             dataType: "json"
         });
@@ -53,7 +53,7 @@ async function filterTipo() {
         try {
             let tipo = document.getElementById("tipoPedido").value;
             let pedidos = await $.ajax({
-                url: "/api/Pedido/filtrar_tipo?tipo=" + tipo,
+                url: "/api/pedidos/filtro/tipo?tipo=" + tipo,
                 method: "get",
                 dataType: "json"
             });
@@ -69,7 +69,7 @@ async function filterOng() {
         try {
             let ong = document.getElementById("ong").value;
             let pedidos = await $.ajax({
-                url: "/api/Pedido/filtrar_ong?ong=" + ong,
+                url: "/api/pedidos/filtro/ong?ong=" + ong,
                 method: "get",
                 dataType: "json"
             });

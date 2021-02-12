@@ -9,15 +9,21 @@
     <body>
         <header > CitySos </header>    
         <main id="main">
+
             <section> 
+                <h2>Login Empresa </h2>
                 <select id="empresa"></select>
-                <input type="button" value="Login Empresa" onclick="loginEmpresa().setSessionUser()">
+                <input type="button" value="Login Empresa" onclick="loginEmpresa().setSessionEmpresa()">
                 <input type="button" value="Registrar" onclick="addEmpresa()">
             </section>
+
             <section>
-                <h2>Pagina Ong </h2>
-                <input type="button" value="Solicitar" onclick="loginOng()">
+                <h2>Login Ong </h2>
+                <select id="ong"></select>
+                <input type="button" value="Login Empresa" onclick="loginOng().setSessionOng()">
+                <input type="button" value="Registrar" onclick="addOng()">
             </section>
+
         </main>
         <footer> FOOTER </footer>
     </body>

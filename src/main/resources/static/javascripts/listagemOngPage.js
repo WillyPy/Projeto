@@ -1,11 +1,27 @@
 window.onload = async function() {
-    loadPedidos();
+    var ongId = sessionStorage.getItem("ongId");
+    loadPedidos(ongId);
+    try {
+
+        let ong = await $.ajax({
+            url: "/api/ongs/"+ongId,
+            method: "get",
+            dataType: "json"
+        });
+
+        console.log(ong);
+        document.getElementById("ong").innerHTML = ong.nome;
+        
+    } catch(err) {
+        console.log(err);
+    }
+
 }
 
-async function loadPedidos() {
+async function loadPedidos(ongId) {
     try {
         let pedidos = await $.ajax({
-            url: "/api/Pedido/all",
+            url: "/api/pedidos/ong/"+ongId,
             method: "get",
             dataType: "json"
         });
@@ -40,7 +56,7 @@ async function filterOng() {
     try {
         let ong = document.getElementById("ong").value;
         let pedidos = await $.ajax({
-            url: "/api/Pedido/filtrar_ong?ong=" + ong,
+            url: "/api/pedido/filtro/ong?ong=" + ong,
             method: "get",
             dataType: "json"
         });

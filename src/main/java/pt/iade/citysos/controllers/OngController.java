@@ -16,7 +16,7 @@ import pt.iade.citysos.models.exceptions.NotFoundException;
 import pt.iade.citysos.models.repositories.OngRepository;
 
 @RestController
-@RequestMapping(path="/api/Ong")
+@RequestMapping(path="/api/ongs")
 public class OngController {
     private Logger logger = org.slf4j.LoggerFactory.getLogger(OngController.class);
     @Autowired
