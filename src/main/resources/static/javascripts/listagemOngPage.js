@@ -51,6 +51,9 @@ function showPedido(pedidoId) {
     sessionStorage.setItem("pedidoId",pedidoId);
     window.location = "pedidoOng.html";
 }
+function adicionarPedido() {
+    window.location = "adicionarPedido.html";
+}
 
 async function filterOng() {
     try {
