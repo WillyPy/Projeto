@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import pt.iade.citysos.models.EmpresaPedido;
 import pt.iade.citysos.models.Pedido;
 import pt.iade.citysos.models.exceptions.NotFoundException;
 import pt.iade.citysos.models.repositories.PedidoRepository;
@@ -65,6 +66,12 @@ public class PedidoController {
     public Iterable<PedidoView> SerchPedidoOng(@RequestParam(value = "ong", defaultValue = "") String ongPedKey) {
         logger.info("Pedido com o seu tipo: " + ongPedKey);
         return pedidoRepository.findPedidoByOng(ongPedKey);
+    }
+
+    @GetMapping(path = "/estadoPedido/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public EmpresaPedido estadoPedido(@PathVariable int id) {
+        logger.info("Todos pedidos da ong: " + id);
+        return pedidoRepository.estadoPedido(id);
     }
 
     @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)

@@ -16,6 +16,21 @@ window.onload = async function() {
     } catch(err) {
         console.log(err);
     }
+
+    try {
+    
+        let pedido = await $.ajax({
+            url: "/api/pedidos/estadoPedido/"+ongId,
+            method: "get",
+            dataType: "json"
+        });
+        console.log(pedido);
+     
+        document.getElementById("Estado").innerHTML = pedido.carta;
+    } catch(err) {
+        console.log(err);
+    }
+
 }
 async function aceitar() {
     try {

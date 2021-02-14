@@ -51,14 +51,14 @@ Texto Exemplo de detalhes fornecidos para efectuar um pedido na plataforma
 com todos os detalhes necessarios.',1,4);
 
 
-insert into empresa_pedido(ep_data,ep_p_id,ep_est_id) values(sysdate(),1,1);
-insert into empresa_pedido(ep_data,ep_p_id,ep_est_id) values(sysdate(),2,1);
-insert into empresa_pedido(ep_data,ep_p_id,ep_est_id) values(sysdate(),3,1);
-insert into empresa_pedido(ep_e_id,ep_data,ep_p_id,ep_est_id) values(3,sysdate(),4,3);
-insert into empresa_pedido(ep_e_id,ep_data,ep_p_id,ep_est_id) values(3,sysdate(),5,3);
-insert into empresa_pedido(ep_e_id,ep_data,ep_p_id,ep_est_id) values(3,sysdate(),5,2);
-insert into empresa_pedido(ep_e_id,ep_data,ep_p_id,ep_est_id) values(3,sysdate(),5,3);
-insert into empresa_pedido(ep_e_id,ep_data,ep_p_id,ep_est_id) values(3,sysdate(),2,2);
+insert into empresa_pedido(ep_data,ep_p_id,ep_est_id) values('2021-02-12 04:00:15',1,1);
+insert into empresa_pedido(ep_data,ep_p_id,ep_est_id) values('2021-02-12 04:03:15',2,1);
+insert into empresa_pedido(ep_data,ep_p_id,ep_est_id) values('2021-02-12 04:05:15',3,1);
+insert into empresa_pedido(ep_e_id,ep_data,ep_p_id,ep_est_id) values(3,'2021-07-12 04:00:15',4,3);
+insert into empresa_pedido(ep_e_id,ep_data,ep_p_id,ep_est_id) values(3,'2021-08-12 04:00:15',5,3);
+insert into empresa_pedido(ep_e_id,ep_data,ep_p_id,ep_est_id) values(3,'2021-09-12 04:00:15',5,2);
+insert into empresa_pedido(ep_e_id,ep_data,ep_p_id,ep_est_id) values(3,'2021-13-12 04:00:15',5,3);
+insert into empresa_pedido(ep_e_id,ep_data,ep_p_id,ep_est_id) values(3,'2021-15-12 04:00:15',2,2);
 
 /*
 insert into empresa_pedido(ep_data, ep_e_id, ep_p_id, ep_est_id) values(str_to_date('2020.1.01','%Y.%m.%d'),1,1,0);

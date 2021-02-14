@@ -30,6 +30,16 @@ ANd tip_ped_id=p_tip_ped_id
 Order by p_id
 ;
 
+Select p_id AS id, est_estado AS estado
+from estado_pedido a
+Join empresa_pedido b on b.ep_est_id=a.est_id
+Join pedido c
+on b.ep_p_id=c.p_id
+where ep_data =(select Max(ep_data) from empresa_pedido where ep_p_id=b.ep_p_id) 
+And ep_p_id=1
+order by p_id;
+
+
 #Mostrar todos pedidos feitos por uma determinada ong
 SELECT p_id AS id, p_cart_sol AS carta, ong_nome AS ong, b.tip_ped_nome AS tipoPedido
 FROM tipo_pedido b, pedido a, ong
