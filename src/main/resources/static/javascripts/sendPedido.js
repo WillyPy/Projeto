@@ -1,4 +1,5 @@
 window.onload = async function() {
+
     try {
         let tipos = await $.ajax({
             url: "/api/tippedidos",
@@ -15,30 +16,14 @@ window.onload = async function() {
         console.log(err);
         // mensagem de erro para o utilizador      
     }
-
-    try {
-        let ongs = await $.ajax({
-            url: "/api/ongs",
-            method: "get",
-            dataType: "json"
-        });
-        let html="";
-        for (let ong of ongs) {
-            html+= "<option value="+ong.id+">"+ong.nome+
-                "</option>";
-        }
-        document.getElementById("ongs").innerHTML = html;
-    } catch (err) {
-        console.log(err);
-        // mensagem de erro para o utilizador      
-    }
 }
 
 async function sendPedido() {
+    var ongId = sessionStorage.getItem("ongId");
     try {
         let pedido = {
             carta: document.getElementById("carta").value,
-            ong: { id: parseInt(document.getElementById("ongs").value) },
+            ong: { id: ongId },
             tipoPedido: { id: parseInt(document.getElementById("tipos").value) }
         }
         console.log(JSON.stringify(pedido));
