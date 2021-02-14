@@ -25,10 +25,15 @@ Foi neste contexto que tiramos a ideia de fazer este projeto.
 ### **Caso 1: Navegaçao pelos pedidos**
 
 -A empresa direciona-se a area de pedidos feitos a plataforma;
+
 -A empresa procura por um pedido que esteja disposto a aceitar, assim que o encontra o seleciona. Nesta mesma area a empresa pode procurar pedidos de diferentes maneiras:
+
         -Por tipo de pedido(Construção),
+        
         -Pelo nome de ong;
+        
 -Assim que a empresa seleciona o pedido é dericionado à página do pedido, aonde ve mais informações e dai tem duas opções;
+
         -Aceitar o pedido ou rejeitalo.
         
 **Pré-condições:**
